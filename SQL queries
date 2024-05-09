@@ -19,3 +19,9 @@ SELECT * FROM "uber-raw-data-sep14";
 --Confirm the dataset size
 SELECT COUNT(*) FROM "Combined_data" ;
 ->Number of row : 4534327 , Number of column : 4
+
+--Confirm no missing value
+SELECT 
+    CASE WHEN COUNT(*) = COUNT('Date/Time') THEN 'No missing values'
+         ELSE 'Missing values detected' END AS missing_values_check
+FROM Combined_data;
