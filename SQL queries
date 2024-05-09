@@ -1,0 +1,15 @@
+
+# Combined csv files from April to September 2014
+CREATE TABLE Combined_data AS
+SELECT * FROM "uber-raw-data-apr14"
+UNION ALL
+SELECT * FROM "uber-raw-data-may14"
+UNION ALL
+SELECT * FROM "uber-raw-data-jun14"
+UNION ALL
+SELECT * FROM "uber-raw-data-jul14"
+UNION ALL
+SELECT * FROM "uber-raw-data-aug14"
+UNION ALL
+SELECT * FROM "uber-raw-data-sep14";
+
