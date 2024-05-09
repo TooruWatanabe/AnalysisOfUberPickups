@@ -1,5 +1,8 @@
+--Dataset: Uber Pickups in New York City
+--Source: https://www.kaggle.com/datasets/fivethirtyeight/uber-pickups-in-new-york-city
+--Queried using: SQLite 3
 
-# Combined csv files from April to September 2014
+--Combined csv files from April to September 2014
 CREATE TABLE Combined_data AS
 SELECT * FROM "uber-raw-data-apr14"
 UNION ALL
@@ -13,3 +16,6 @@ SELECT * FROM "uber-raw-data-aug14"
 UNION ALL
 SELECT * FROM "uber-raw-data-sep14";
 
+--Confirm the dataset size
+SELECT COUNT(*) FROM "Combined_data" ;
+->Number of row : 4534327 , Number of column : 4
